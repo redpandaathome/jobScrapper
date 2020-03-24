@@ -117,6 +117,7 @@ func writeJobs(jobs []extractedJob) {
 
 	for _, job := range jobs {
 		jobSlice := []string{"https://kr.indeed.com/iewjob?jk=" + job.id, job.title, job.location, job.salary, job.summary}
+
 		jwErr := w.Write(jobSlice)
 		checkErr(jwErr)
 	}
